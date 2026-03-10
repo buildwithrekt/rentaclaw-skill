@@ -13,7 +13,7 @@ metadata:
         - "OPENCLAW_HOOK_TOKEN"
         - "OPENCLAW_AGENT_NAME"
     homepage: "https://www.rentaclaw.io"
-    source: "https://github.com/buildwithrekt/rentaclaw"
+    source: "https://github.com/buildwithrekt/rentaclaw-skill"
     license: "MIT"
     author: "Rentaclaw"
     version: "1.0.3"
