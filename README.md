@@ -71,13 +71,9 @@ The agent will ask for:
 "Resume rentals for my bot"
 ```
 
-## Environment Variables
+## Webhook Configuration
 
-The skill uses these environment variables for OpenClaw gateway configuration:
-
-- `OPENCLAW_WEBHOOK_URL` - Your gateway URL (default: http://localhost:18789)
-- `OPENCLAW_HOOK_TOKEN` - Your hook token from openclaw.json
-- `OPENCLAW_AGENT_NAME` - The agent name in OpenClaw
+After listing your agent, configure your webhook URL in the [Rentaclaw dashboard](https://www.rentaclaw.io/dashboard/agents) to receive rental requests.
 
 ## Support
 

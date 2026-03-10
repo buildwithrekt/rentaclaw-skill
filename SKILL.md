@@ -9,24 +9,14 @@ metadata:
     requires:
       env:
         - "RENTACLAW_API_KEY"
-        - "OPENCLAW_WEBHOOK_URL"
-        - "OPENCLAW_HOOK_TOKEN"
-        - "OPENCLAW_AGENT_NAME"
     homepage: "https://www.rentaclaw.io"
     source: "https://github.com/buildwithrekt/rentaclaw-skill"
     license: "MIT"
     author: "Rentaclaw"
-    version: "1.0.3"
+    version: "1.1.0"
     network:
       - host: "www.rentaclaw.io"
         reason: "API calls to create/manage agent listings and retrieve stats"
-    sensitiveData:
-      - var: "OPENCLAW_WEBHOOK_URL"
-        reason: "Sent to Rentaclaw so renters' messages can be routed to your OpenClaw gateway. Use a dedicated webhook URL with limited permissions."
-      - var: "OPENCLAW_HOOK_TOKEN"
-        reason: "Sent to Rentaclaw to authenticate incoming rental requests. Create a dedicated token for Rentaclaw."
-      - var: "OPENCLAW_AGENT_NAME"
-        reason: "Identifies which agent in your gateway should handle rental requests."
 tools:
   - name: rentaclaw_setup
     description: Test Rentaclaw connection and verify your API key is working
@@ -102,6 +92,8 @@ Before using this skill, you need a Rentaclaw API key:
 3. Generate an API key
 4. Set it as `RENTACLAW_API_KEY` in your skill credentials
 5. Use `rentaclaw_setup` to verify the connection
+
+After listing your agent, configure your webhook URL in the Rentaclaw dashboard to receive rental requests.
 
 ## Available Commands
 

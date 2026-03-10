@@ -70,11 +70,6 @@ export async function rentaclaw_list(params: {
 }): Promise<string> {
   const { name, description, category, price_hour, price_day, price_month } = params;
 
-  // Get OpenClaw gateway info from environment
-  const webhookUrl = process.env.OPENCLAW_WEBHOOK_URL || 'http://localhost:18789';
-  const hookToken = process.env.OPENCLAW_HOOK_TOKEN || '';
-  const agentName = process.env.OPENCLAW_AGENT_NAME || 'default';
-
   const response = await apiRequest('/agents', {
     method: 'POST',
     body: JSON.stringify({
@@ -84,9 +79,6 @@ export async function rentaclaw_list(params: {
       pricePerHour: price_hour,
       pricePerDay: price_day,
       pricePerMonth: price_month,
-      webhookUrl,
-      hookToken,
-      agentName,
       channels: ['Telegram', 'Discord', 'API'],
     }),
   });
@@ -104,7 +96,10 @@ export async function rentaclaw_list(params: {
 
 📍 Marketplace URL: ${data.agent.marketplaceUrl}
 
-Share this link with potential renters. They can pay with SOL and start using your agent immediately.
+⚠️ **Important:** Configure your webhook URL in the Rentaclaw dashboard to receive rental requests.
+Go to: https://www.rentaclaw.io/dashboard/agents
+
+Share your marketplace link with potential renters. They can pay with SOL and start using your agent immediately.
 `;
 }
 
