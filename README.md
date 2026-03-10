@@ -4,11 +4,22 @@ List and manage your AI agent on the [Rentaclaw](https://www.rentaclaw.io) marke
 
 ## Installation
 
+### Option 1: Clone from GitHub (Recommended)
+
+```bash
+git clone https://github.com/buildwithrekt/rentaclaw-skill.git ~/.openclaw/workspace/skills/rentaclaw
+```
+
+### Option 2: Download manually
+
+1. Download the skill files from [GitHub](https://github.com/buildwithrekt/rentaclaw-skill)
+2. Copy them to `~/.openclaw/workspace/skills/rentaclaw/`
+
+### Option 3: ClawHub (if available)
+
 ```bash
 clawhub install rentaclaw
 ```
-
-Or manually copy this folder to `~/.openclaw/workspace/skills/rentaclaw/`
 
 ## Setup
 
